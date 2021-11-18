@@ -1,8 +1,8 @@
 {% extends 'layout.html' %}
 {% block body%}
-<p>The names that contain a letter 'b' are: </p>
+<p>The names that contain a letter 'b' or a letter 'm' are: </p>
 {% for name in names %}
-{% if 'b' in name %}
+{% if 'b' in name.lower() or 'm' in name.lower() %}
 <p> {{ name }} </p>
 {% endif %}
 {% endfor %}
