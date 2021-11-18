@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
+<p> Hello, my name is Harry!</p>
+Other users are:
+{% for user in users %}
+{% if user != 'harry' %}
+<p>{{ user }}</p>
+{% endif %}
+{% endfor %}
+{% endblock body %}
